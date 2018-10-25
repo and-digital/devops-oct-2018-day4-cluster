@@ -1,7 +1,8 @@
-variable "vote_app_sg_id" {}
+variable "public_subnet_ids" {}
 
-variable "vote_app_public_sn_01_id" {}
-
-variable "vote_app_public_sn_02_id" {}
 
 variable "vpc_id" {}
+
+variable "environment" {}
+
+variable "allow_cidr_block" {}

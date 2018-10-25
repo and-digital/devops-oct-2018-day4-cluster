@@ -1,5 +1,5 @@
 
-variable "enviroment" {}
+variable "environment" {}
 
 variable "cidr" {}
 
@@ -28,9 +28,21 @@ variable "availability_zones" {
 }
 
 variable "aws_aim" {
-  default = ""
+  default = "ami-066826c6a40879d75"
 }
 
 variable "instance_type" {
   default = "t2.micro"
+}
+
+variable "key_name" {}
+
+
+variable "load_balancers" {
+  type = "list"
+  default = []
+}
+
+variable "instance_group" {
+  default = "hello"
 }

@@ -1,10 +1,7 @@
 resource "aws_alb" "ecs-load-balancer" {
   name = "ecs-load-balancer"
-  security_groups = [
-    "${var.vote_app_sg_id}"]
-  subnets = [
-    "${var.vote_app_public_sn_01_id}",
-    "${var.vote_app_public_sn_02_id}"]
+  security_groups = ["${aws_security_group.alb_sg.id}"]
+  subnets = ["${var.public_subnet_ids}"]
 
   tags {
     Name = "ecs-load-balancer"
@@ -41,5 +38,28 @@ resource "aws_alb_listener" "alb-listener" {
   default_action {
     target_group_arn = "${aws_alb_target_group.ecs-target-group.arn}"
     type = "forward"
+  }
+}
+
+resource "aws_security_group" "alb_sg" {
+  name = "awdawd"
+  vpc_id = "${var.vpc_id}"
+
+
+  tags {
+    Name = "${var.environment}"
+  }
+
+  ingress {
+    from_port = 80
+    protocol = "TCP"
+    to_port = 80
+    cidr_blocks = ["${var.allow_cidr_block}"]
+  }
+
+  ingress {
+    from_port = 443
+    protocol = "TCP"
+    to_port = 443
   }
 }

@@ -1,6 +1,6 @@
 
 
-variable "enviroment" {}
+variable "environment" {}
 
 variable "cidr" {}
 

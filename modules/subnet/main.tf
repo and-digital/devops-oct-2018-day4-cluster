@@ -6,7 +6,7 @@ resource "aws_subnet" "subnet" {
   count = "${length(var.cidrs)}"
 
   tags {
-    Name = "${var.enviroment}"
+    Name = "${var.environment}"
   }
 }
 
@@ -16,7 +16,7 @@ resource "aws_route_table" "subnet" {
   count = "${length(var.cidrs)}"
 
   tags {
-    Name = "${var.enviroment}"
+    Name = "${var.environment}"
   }
 }
 

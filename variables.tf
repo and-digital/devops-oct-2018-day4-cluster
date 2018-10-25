@@ -16,7 +16,7 @@ variable "aws_key" {}
 
 variable "aws_secret" {}
 
-variable "enviroment" {
+variable "environment" {
   default = "DevOpsOct2018Tng"
 }
 
@@ -37,4 +37,8 @@ variable "public_cidrs" {
 variable "availability_zones" {
   type = "list"
   default = ["eu-west-1a", "eu-west-1b"]
+}
+
+variable "key" {
+
 }

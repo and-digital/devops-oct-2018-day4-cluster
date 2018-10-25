@@ -2,14 +2,14 @@
 module "vpc" {
   source = "../vpc"
   cidr = "${var.cidr}"
-  enviroment = "${var.enviroment}"
+  environment = "${var.environment}"
 }
 
 module "private_subnet" {
   source = "../subnet"
   cidrs = "${var.private_cidrs}"
   availability_zones = "${var.availability_zones}"
-  enviroment = "${var.enviroment}"
+  environment = "${var.environment}"
   vpc_id = "${module.vpc.id}"
 }
 
@@ -17,7 +17,7 @@ module "public_subnet" {
   source = "../subnet"
   cidrs = "${var.public_cidrs}"
   availability_zones = "${var.availability_zones}"
-  enviroment = "${var.enviroment}"
+  environment = "${var.environment}"
   vpc_id = "${module.vpc.id}"
 }
 

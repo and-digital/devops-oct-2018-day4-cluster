@@ -7,6 +7,6 @@ variable "availability_zones" {
   type = "list"
 }
 
-variable "enviroment" {}
+variable "environment" {}
 
 variable "vpc_id" {}
