@@ -22,8 +22,14 @@ variable "enviroment" {
 
 variable "cidr" {}
 
-variable "private_cidrs" {}
+variable "private_cidrs" {
+  type = "list"
+}
 
-variable "public_cidrs" {}
+variable "public_cidrs" {
+  type = "list"
+}
 
-variable "availability_zones" {}
+variable "availability_zones" {
+  type = "list"
+}

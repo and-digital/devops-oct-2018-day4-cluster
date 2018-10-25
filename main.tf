@@ -10,6 +10,7 @@ module "private_subnet" {
   cidrs = "${var.private_cidrs}"
   availability_zones = "${var.availability_zones}"
   enviroment = "${var.enviroment}"
+  vpc_id = "${module.vpc.id}"
 }
 
 module "public_subnet" {
@@ -17,4 +18,5 @@ module "public_subnet" {
   cidrs = "${var.public_cidrs}"
   availability_zones = "${var.availability_zones}"
   enviroment = "${var.enviroment}"
+  vpc_id = "${module.vpc.id}"
 }
