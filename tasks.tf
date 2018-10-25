@@ -28,7 +28,7 @@ resource "aws_ecs_task_definition" "vote" {
   family = "vote"
 }
 
-resource "aws_ecs_service" "" {
+resource "aws_ecs_service" "vote" {
   name = "VOTE"
   task_definition = "${aws_ecs_task_definition.vote.id}"
 }
