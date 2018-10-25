@@ -1,6 +1,6 @@
 
 
-module "cluster" {
+module "ecs" {
   source = "modules/ecs"
   environment = "${var.environment}"
   cidr = "${var.cidr}"
@@ -12,4 +12,9 @@ module "cluster" {
 
 resource "aws_key_pair" "key" {
   public_key = "${file("~/.ssh/id_rsa.pub")}"
+}
+
+
+output "vpc_ip" {
+  value = "${module.ecs.vpc_id}"
 }
