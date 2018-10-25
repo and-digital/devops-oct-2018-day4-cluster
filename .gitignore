@@ -1,2 +1,4 @@
 *.tfvars
 .terraform
+
+.idea
