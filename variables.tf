@@ -26,6 +26,4 @@ variable "private_cidrs" {}
 
 variable "public_cidrs" {}
 
-variable "availblity_zones" {
-
-}
+variable "availability_zones" {}
