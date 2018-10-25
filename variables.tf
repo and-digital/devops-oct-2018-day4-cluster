@@ -20,16 +20,21 @@ variable "enviroment" {
   default = "DevOpsOct2018Tng"
 }
 
-variable "cidr" {}
+variable "cidr" {
+  default = "10.0.1.0/25"
+}
 
 variable "private_cidrs" {
   type = "list"
+  default = ["10.0.4.0/24", "10.0.5.0/24"]
 }
 
 variable "public_cidrs" {
   type = "list"
+  default = ["10.0.2.0/24", "10.0.3.0/24"]
 }
 
 variable "availability_zones" {
   type = "list"
+  default = ["eu-west-1a", "eu-west-1b"]
 }

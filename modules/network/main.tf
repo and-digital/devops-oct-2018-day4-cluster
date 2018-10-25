@@ -24,7 +24,7 @@ module "public_subnet" {
 
 resource "aws_route" "public_igw_route" {
   route_table_id = "${element(module.public_subnet.route_table_ids, count.index)}"
-  count = "${count(var.public_cidrs)}"
+  count = "${length(var.public_cidrs)}"
   gateway_id = "${module.vpc.igw}"
   destination_cidr_block = "${var.destination_cidr_block}"
 }
