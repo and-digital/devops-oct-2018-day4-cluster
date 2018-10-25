@@ -27,3 +27,8 @@ resource "aws_ecs_task_definition" "vote" {
   EOF
   family = "vote"
 }
+
+resource "aws_ecs_service" "" {
+  name = "VOTE"
+  task_definition = "${aws_ecs_task_definition.vote.id}"
+}
