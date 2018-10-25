@@ -9,10 +9,10 @@ resource "aws_ecs_task_definition" "vote" {
       "cpu": 10,
       "environment": [{
         "name": "DB_HOST",
-        "value": "KEY"
+        "value": "redis-instance.2apm2l.0001.euw2.cache.amazonaws.com"
       },{
         "name": "DB_PORT",
-        "value": "KEY"
+        "value": "6379"
       }],
       "memory": 256,
       "essential": true,

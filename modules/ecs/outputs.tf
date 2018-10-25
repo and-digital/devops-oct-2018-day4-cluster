@@ -1,5 +1,5 @@
 
 
-output "vpc_ic" {
+output "vpc_id" {
   value = "${module.network.vpc_id}"
 }
