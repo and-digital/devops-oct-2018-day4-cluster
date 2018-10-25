@@ -39,6 +39,3 @@ variable "availability_zones" {
   default = ["eu-west-1a", "eu-west-1b"]
 }
 
-variable "key" {
-
-}
