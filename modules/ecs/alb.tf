@@ -1,7 +1,6 @@
 module "alb" {
   source            = "../alb"
   environment       = "${var.environment}"
-  alb_name          = "${var.environment}-alb"
   vpc_id            = "${module.network.vpc_id}"
   public_subnet_ids = "${module.network.public_subnet_ids}"
   allow_cidr_block = "0.0.0.0/0"
