@@ -36,7 +36,7 @@ variable "public_cidrs" {
 
 variable "availability_zones" {
   type = "list"
-  default = ["eu-west-1a", "eu-west-1b"]
+  default = ["eu-west-2a", "eu-west-2b"]
 }
 
 variable "aws_aim" {
