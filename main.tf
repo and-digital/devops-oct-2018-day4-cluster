@@ -8,6 +8,7 @@ module "ecs" {
   public_cidrs = "${var.public_cidrs}"
   availability_zones = "${var.availability_zones}"
   key_name = "${aws_key_pair.key.key_name}"
+  aws_aim = "${var.aws_aim}"
 }
 
 resource "aws_key_pair" "key" {

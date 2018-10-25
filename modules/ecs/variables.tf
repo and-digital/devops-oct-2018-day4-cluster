@@ -27,9 +27,7 @@ variable "availability_zones" {
   type = "list"
 }
 
-variable "aws_aim" {
-  default = "ami-066826c6a40879d75"
-}
+variable "aws_aim" {}
 
 variable "instance_type" {
   default = "t2.micro"

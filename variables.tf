@@ -1,6 +1,6 @@
 
 variable "region" {
-  default = "eu-west-1"
+  default = "eu-west-2"
 }
 
 variable "aws_state_bucket" {
@@ -39,3 +39,6 @@ variable "availability_zones" {
   default = ["eu-west-1a", "eu-west-1b"]
 }
 
+variable "aws_aim" {
+  default = "ami-0cb31bf24b130a0f9"
+}
