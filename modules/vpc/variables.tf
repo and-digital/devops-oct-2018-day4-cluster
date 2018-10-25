@@ -1,0 +1,4 @@
+
+variable "enviroment" {}
+
+variable "cidr" {}

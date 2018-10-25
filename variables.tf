@@ -15,3 +15,9 @@ variable "aws_state_bucket_key" {
 variable "aws_key" {}
 
 variable "aws_secret" {}
+
+variable "enviroment" {
+  default = "DevOpsOct2018Tng"
+}
+
+variable "cidr" {}
